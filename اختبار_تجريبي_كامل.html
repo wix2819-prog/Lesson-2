@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>اختبار تجريبي - جميع الأسئلة</title>
+<style>
+body { font-family: Tahoma; direction: rtl; margin: 20px; }
+.question { border: 1px solid #aaa; padding: 15px; margin-bottom: 20px; border-radius: 6px; }
+.result { font-weight: bold; margin-top: 10px; }
+.correct { color: green; display:none; }
+.wrong { color: red; display:none; }
+</style>
+<script>
+function checkAnswer(qNum, correctAnswer) {
+  var options = document.getElementsByName("q"+qNum);
+  var selected = "";
+  for(var i=0; i<options.length; i++){
+    if(options[i].checked){
+      selected = options[i].value;
+    }
+  }
+  if(selected === correctAnswer){
+    document.getElementById("correct"+qNum).style.display = "block";
+    document.getElementById("wrong"+qNum).style.display = "none";
+  } else if(selected !== ""){
+    document.getElementById("wrong"+qNum).style.display = "block";
+    document.getElementById("correct"+qNum).style.display = "none";
+  }
+}
+</script>
+</head>
+<body>
+
+<h2>📘 اختبار تجريبي - جميع الأسئلة</h2>
+<div class="question">
+  <p><b>س1:</b> من المؤلفين المعاصرين في علوم القرآن:</p>
+  <label><input type="radio" name="q1" value="أ"> أ- الْحوفي</label><br>
+  <label><input type="radio" name="q1" value="ب"> ب- الزركشي</label><br>
+  <label><input type="radio" name="q1" value="ج"> ج- السيوطي</label><br>
+  <label><input type="radio" name="q1" value="د"> د- محمد الزرقاوي</label><br>
+  <button onclick="checkAnswer(1, 'د')">تحقق</button>
+  <p id="correct1" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong1" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س2:</b> ما استنبطه العلماء هو:</p>
+  <label><input type="radio" name="q2" value="أ"> أ- المطلق</label><br>
+  <label><input type="radio" name="q2" value="ب"> ب- المقيد</label><br>
+  <label><input type="radio" name="q2" value="ج"> ج- التفسير</label><br>
+  <label><input type="radio" name="q2" value="د"> د- التأويل</label><br>
+  <button onclick="checkAnswer(2, 'د')">تحقق</button>
+  <p id="correct2" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong2" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س3:</b> علم يُفهم به كتاب الله تعالى، وبيان معانيه واستخراج أحكامه:</p>
+  <label><input type="radio" name="q3" value="أ"> أ- القراءات</label><br>
+  <label><input type="radio" name="q3" value="ب"> ب- علوم القرآن</label><br>
+  <label><input type="radio" name="q3" value="ج"> ج- الوحي</label><br>
+  <label><input type="radio" name="q3" value="د"> د- التفسير</label><br>
+  <button onclick="checkAnswer(3, 'د')">تحقق</button>
+  <p id="correct3" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong3" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س4:</b> معالم التنزيل من كتب التفسير بالمأثور ألّفه:</p>
+  <label><input type="radio" name="q4" value="أ"> أ- ابن جرير الطبري</label><br>
+  <label><input type="radio" name="q4" value="ب"> ب- عبد الرحمن السعدي</label><br>
+  <label><input type="radio" name="q4" value="ج"> ج- البغوي</label><br>
+  <label><input type="radio" name="q4" value="د"> د- ابن كثير</label><br>
+  <button onclick="checkAnswer(4, 'ج')">تحقق</button>
+  <p id="correct4" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong4" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س5:</b> التفسير الذي يتوقف المفسر عمّا لا فائدة في معرفته هو:</p>
+  <label><input type="radio" name="q5" value="أ"> أ- بالإجتهاد</label><br>
+  <label><input type="radio" name="q5" value="ب"> ب- بالرأي</label><br>
+  <label><input type="radio" name="q5" value="ج"> ج- باللغوي</label><br>
+  <label><input type="radio" name="q5" value="د"> د- بالمأثور</label><br>
+  <button onclick="checkAnswer(5, 'د')">تحقق</button>
+  <p id="correct5" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong5" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س6:</b> من المفسرين الكبار في العصر الحديث:</p>
+  <label><input type="radio" name="q6" value="أ"> أ- الطبري</label><br>
+  <label><input type="radio" name="q6" value="ب"> ب- ابن كثير</label><br>
+  <label><input type="radio" name="q6" value="ج"> ج- ابن مجاهد</label><br>
+  <label><input type="radio" name="q6" value="د"> د- السعدي</label><br>
+  <button onclick="checkAnswer(6, 'د')">تحقق</button>
+  <p id="correct6" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong6" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س7:</b> إذا تحدث المفسر عن حركة الأرض ودورانها في قوله تعالى: (وترى الجبال تحسبها جامدة وهي تمر مر السحاب صُنع الله):</p>
+  <label><input type="radio" name="q7" value="أ"> أ- التشريعي</label><br>
+  <label><input type="radio" name="q7" value="ب"> ب- العلمي</label><br>
+  <label><input type="radio" name="q7" value="ج"> ج- اللغوي</label><br>
+  <label><input type="radio" name="q7" value="د"> د- النبوي</label><br>
+  <button onclick="checkAnswer(7, 'ب')">تحقق</button>
+  <p id="correct7" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong7" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س8:</b> أي مما يلي من كتب التفسير المختصرة:</p>
+  <label><input type="radio" name="q8" value="أ"> أ- معالم التنزيل للنووي</label><br>
+  <label><input type="radio" name="q8" value="ب"> ب- تفسير القرآن العظيم لابن كثير</label><br>
+  <label><input type="radio" name="q8" value="ج"> ج- تيسير الكريم الرحمن للسعدي</label><br>
+  <label><input type="radio" name="q8" value="د"> د- أضواء البيان للشنقيطي</label><br>
+  <button onclick="checkAnswer(8, 'ج')">تحقق</button>
+  <p id="correct8" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong8" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س9:</b> علوم القرآن الكريم تم تدوينها في عصر:</p>
+  <label><input type="radio" name="q9" value="أ"> أ- الرسول ﷺ وصحابه</label><br>
+  <label><input type="radio" name="q9" value="ب"> ب- التابعين</label><br>
+  <label><input type="radio" name="q9" value="ج"> ج- النهضة</label><br>
+  <label><input type="radio" name="q9" value="د"> د- ـ</label><br>
+  <button onclick="checkAnswer(9, 'ج')">تحقق</button>
+  <p id="correct9" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong9" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س10:</b> من الحكمة في نزول القرآن الكريم مفرقاً:</p>
+  <label><input type="radio" name="q10" value="أ"> أ- مواكبة الحوادث</label><br>
+  <label><input type="radio" name="q10" value="ب"> ب- تثبيت قلب النبي ﷺ</label><br>
+  <label><input type="radio" name="q10" value="ج"> ج- التدرج في التشريع</label><br>
+  <label><input type="radio" name="q10" value="د"> د- جميع ما سبق</label><br>
+  <button onclick="checkAnswer(10, 'د')">تحقق</button>
+  <p id="correct10" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong10" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س11:</b> أول من جمع القرآن هو:</p>
+  <label><input type="radio" name="q11" value="أ"> أ- أبو بكر</label><br>
+  <label><input type="radio" name="q11" value="ب"> ب- عمر بن الخطاب</label><br>
+  <label><input type="radio" name="q11" value="ج"> ج- علي بن أبي طالب</label><br>
+  <label><input type="radio" name="q11" value="د"> د- عثمان بن عفان</label><br>
+  <button onclick="checkAnswer(11, 'أ')">تحقق</button>
+  <p id="correct11" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong11" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س12:</b> أي من الأسباب التالية دعت سيدنا عثمان رضي الله عنه لجمع القرآن:</p>
+  <label><input type="radio" name="q12" value="أ"> أ- خشية ذهاب حملته</label><br>
+  <label><input type="radio" name="q12" value="ب"> ب- كثرة الاختلاف في وجوه القراءات</label><br>
+  <label><input type="radio" name="q12" value="ج"> ج- اتساع رقعة البلاد</label><br>
+  <label><input type="radio" name="q12" value="د"> د- حفظ القرآن بقراءة السبعة</label><br>
+  <button onclick="checkAnswer(12, 'ب')">تحقق</button>
+  <p id="correct12" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong12" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س13:</b> مؤسس مدرسة الكوفة هو:</p>
+  <label><input type="radio" name="q13" value="أ"> أ- أبو موسى الأشعري</label><br>
+  <label><input type="radio" name="q13" value="ب"> ب- عبد الله بن مسعود</label><br>
+  <label><input type="radio" name="q13" value="ج"> ج- أبي بن كعب</label><br>
+  <label><input type="radio" name="q13" value="د"> د- عامر الشعبي</label><br>
+  <button onclick="checkAnswer(13, 'ب')">تحقق</button>
+  <p id="correct13" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong13" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س14:</b> المفسر يجب أن يتوفر فيه مما يلي ما لا يجب تحققه فيه:</p>
+  <label><input type="radio" name="q14" value="أ"> أ- العقيدة الصحيحة</label><br>
+  <label><input type="radio" name="q14" value="ب"> ب- العلم بالإعجاز العلمي</label><br>
+  <label><input type="radio" name="q14" value="ج"> ج- العلم باللغة العربية</label><br>
+  <label><input type="radio" name="q14" value="د"> د- التجرد من الهوى</label><br>
+  <button onclick="checkAnswer(14, 'ب')">تحقق</button>
+  <p id="correct14" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong14" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س15:</b> من قواعد التفسير: إذا اختلف المعنى الشرعي واللغوي قدم:</p>
+  <label><input type="radio" name="q15" value="أ"> أ- المعنى اللغوي</label><br>
+  <label><input type="radio" name="q15" value="ب"> ب- المطلق على المقيد</label><br>
+  <label><input type="radio" name="q15" value="ج"> ج- المعنى الشرعي</label><br>
+  <label><input type="radio" name="q15" value="د"> د- الخاص على العام</label><br>
+  <button onclick="checkAnswer(15, 'ج')">تحقق</button>
+  <p id="correct15" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong15" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س16:</b> من سمات السور المكية: كل سورة فيها:</p>
+  <label><input type="radio" name="q16" value="أ"> أ- سجدة</label><br>
+  <label><input type="radio" name="q16" value="ب"> ب- يا أيها الذين آمنوا</label><br>
+  <label><input type="radio" name="q16" value="ج"> ج- مجادلة المشركين</label><br>
+  <label><input type="radio" name="q16" value="د"> د- مجادلة أهل الكتاب</label><br>
+  <button onclick="checkAnswer(16, 'أ')">تحقق</button>
+  <p id="correct16" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong16" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س17:</b> من سمات السور المدنية: كل سورة فيها:</p>
+  <label><input type="radio" name="q17" value="أ"> أ- كلا</label><br>
+  <label><input type="radio" name="q17" value="ب"> ب- سجدة</label><br>
+  <label><input type="radio" name="q17" value="ج"> ج- يا أيها الناس</label><br>
+  <label><input type="radio" name="q17" value="د"> د- يا أيها الذين آمنوا</label><br>
+  <button onclick="checkAnswer(17, 'د')">تحقق</button>
+  <p id="correct17" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong17" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س18:</b> من ضوابط السور المدنية: كل سورة فيها:</p>
+  <label><input type="radio" name="q18" value="أ"> أ- تفصيل أحكام العبادات</label><br>
+  <label><input type="radio" name="q18" value="ب"> ب- يا أيها الناس</label><br>
+  <label><input type="radio" name="q18" value="ج"> ج- كلا</label><br>
+  <label><input type="radio" name="q18" value="د"> د- ـ</label><br>
+  <button onclick="checkAnswer(18, 'أ')">تحقق</button>
+  <p id="correct18" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong18" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س19:</b> أجمعت الأمة على أن ترتيب الآيات في سورها:</p>
+  <label><input type="radio" name="q19" value="أ"> أ- اجتهادي</label><br>
+  <label><input type="radio" name="q19" value="ب"> ب- قياسي</label><br>
+  <label><input type="radio" name="q19" value="ج"> ج- محل اختلاف</label><br>
+  <label><input type="radio" name="q19" value="د"> د- توفيقي</label><br>
+  <button onclick="checkAnswer(19, 'د')">تحقق</button>
+  <p id="correct19" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong19" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س20:</b> سورة سميت بسورة التكذيب هي سورة:</p>
+  <label><input type="radio" name="q20" value="أ"> أ- البينة</label><br>
+  <label><input type="radio" name="q20" value="ب"> ب- الماعون</label><br>
+  <label><input type="radio" name="q20" value="ج"> ج- الحشر</label><br>
+  <label><input type="radio" name="q20" value="د"> د- ـ</label><br>
+  <button onclick="checkAnswer(20, 'ج')">تحقق</button>
+  <p id="correct20" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong20" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س21:</b> سورة سميت بعروس القرآن هي سورة:</p>
+  <label><input type="radio" name="q21" value="أ"> أ- الماعون</label><br>
+  <label><input type="radio" name="q21" value="ب"> ب- الرحمن</label><br>
+  <label><input type="radio" name="q21" value="ج"> ج- النور</label><br>
+  <label><input type="radio" name="q21" value="د"> د- الحشر</label><br>
+  <button onclick="checkAnswer(21, 'ب')">تحقق</button>
+  <p id="correct21" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong21" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س22:</b> السورة التي سميت بالفاضحة هي سورة:</p>
+  <label><input type="radio" name="q22" value="أ"> أ- النور</label><br>
+  <label><input type="radio" name="q22" value="ب"> ب- التوبة</label><br>
+  <label><input type="radio" name="q22" value="ج"> ج- الحشر</label><br>
+  <label><input type="radio" name="q22" value="د"> د- ـ</label><br>
+  <button onclick="checkAnswer(22, 'ب')">تحقق</button>
+  <p id="correct22" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong22" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س23:</b> السورة التي دلت على مسؤولية الإنسان عن تربية نفسه:</p>
+  <label><input type="radio" name="q23" value="أ"> أ- الفجر</label><br>
+  <label><input type="radio" name="q23" value="ب"> ب- البيّنة</label><br>
+  <label><input type="radio" name="q23" value="ج"> ج- الطارق</label><br>
+  <label><input type="radio" name="q23" value="د"> د- الشمس</label><br>
+  <button onclick="checkAnswer(23, 'د')">تحقق</button>
+  <p id="correct23" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong23" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س24:</b> من الآيات التي نزلت في مكة، وعدّها أهل العلم من القرآن المدني:</p>
+  <label><input type="radio" name="q24" value="أ"> أ- اليوم أكملت لكم دينكم</label><br>
+  <label><input type="radio" name="q24" value="ب"> ب- لقد صدق الله رسوله الرؤيا</label><br>
+  <label><input type="radio" name="q24" value="ج"> ج- هم الذين كفروا</label><br>
+  <label><input type="radio" name="q24" value="د"> د- ـ</label><br>
+  <button onclick="checkAnswer(24, 'أ')">تحقق</button>
+  <p id="correct24" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong24" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س25:</b> إذا ورد النص القرآني في سياق التخصيص فإنه يفيد:</p>
+  <label><input type="radio" name="q25" value="أ"> أ- الخصوص-الإطلاق</label><br>
+  <label><input type="radio" name="q25" value="ب"> ب- العموم-الخصوص</label><br>
+  <label><input type="radio" name="q25" value="ج"> ج- العموم-التقييد</label><br>
+  <label><input type="radio" name="q25" value="د"> د- التقييد-العموم</label><br>
+  <button onclick="checkAnswer(25, 'ب')">تحقق</button>
+  <p id="correct25" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong25" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س26:</b> قال تعالى: (حرمت عليكم أمهاتكم) بعد مثال على:</p>
+  <label><input type="radio" name="q26" value="أ"> أ- عام مخصوص من جهة الحكم</label><br>
+  <label><input type="radio" name="q26" value="ب"> ب- عام باقٍ على عمومه</label><br>
+  <label><input type="radio" name="q26" value="ج"> ج- عام مخصوص من جهة اللفظ</label><br>
+  <label><input type="radio" name="q26" value="د"> د- عام يراد به الخصوص</label><br>
+  <button onclick="checkAnswer(26, 'ب')">تحقق</button>
+  <p id="correct26" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong26" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س27:</b> المخصص في قوله تعالى: (وزوجناكم من تساءلون به والأرحام) بعد مخصصها من نوع:</p>
+  <label><input type="radio" name="q27" value="أ"> أ- الدليل</label><br>
+  <label><input type="radio" name="q27" value="ب"> ب- الصفة</label><br>
+  <label><input type="radio" name="q27" value="ج"> ج- الاستثناء</label><br>
+  <label><input type="radio" name="q27" value="د"> د- الشرط</label><br>
+  <button onclick="checkAnswer(27, 'ب')">تحقق</button>
+  <p id="correct27" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong27" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س28:</b> (عتق رقبة مؤمنة) - (عتق رقبة) يدل على:</p>
+  <label><input type="radio" name="q28" value="أ"> أ- مطلق-مطلق</label><br>
+  <label><input type="radio" name="q28" value="ب"> ب- مطلق-مقيد</label><br>
+  <label><input type="radio" name="q28" value="ج"> ج- مقيد-خاص</label><br>
+  <label><input type="radio" name="q28" value="د"> د- مطلق-خاص</label><br>
+  <button onclick="checkAnswer(28, 'ب')">تحقق</button>
+  <p id="correct28" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong28" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س29:</b> الإجابة الصحيحة لتعريف المتشابه في القرآن الكريم:</p>
+  <label><input type="radio" name="q29" value="أ"> أ- ما احتاج إلى بيان</label><br>
+  <label><input type="radio" name="q29" value="ب"> ب- ما استأثر الله بعلمه</label><br>
+  <label><input type="radio" name="q29" value="ج"> ج- ما احتمل أكثر من وجه</label><br>
+  <label><input type="radio" name="q29" value="د"> د- كل ما سبق</label><br>
+  <button onclick="checkAnswer(29, 'د')">تحقق</button>
+  <p id="correct29" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong29" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س30:</b> من المحكمات التي لا يسع فيها الاجتهاد:</p>
+  <label><input type="radio" name="q30" value="أ"> أ- أنصبة المواريث</label><br>
+  <label><input type="radio" name="q30" value="ب"> ب- ما يفسد به الصوم</label><br>
+  <label><input type="radio" name="q30" value="ج"> ج- عدد ركعات صلاة الليل</label><br>
+  <label><input type="radio" name="q30" value="د"> د- الحروف المقطعة</label><br>
+  <button onclick="checkAnswer(30, 'أ')">تحقق</button>
+  <p id="correct30" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong30" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س31:</b> اللفظ المستغرق لجميع ما يصلح له من غير حصر:</p>
+  <label><input type="radio" name="q31" value="أ"> أ- المطلق</label><br>
+  <label><input type="radio" name="q31" value="ب"> ب- العام</label><br>
+  <label><input type="radio" name="q31" value="ج"> ج- المفيد</label><br>
+  <label><input type="radio" name="q31" value="د"> د- المشكل</label><br>
+  <button onclick="checkAnswer(31, 'ب')">تحقق</button>
+  <p id="correct31" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong31" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س32:</b> يختص النسخ في القرآن الكريم بـ:</p>
+  <label><input type="radio" name="q32" value="أ"> أ- التقسيم</label><br>
+  <label><input type="radio" name="q32" value="ب"> ب- الأحكام الشرعية</label><br>
+  <label><input type="radio" name="q32" value="ج"> ج- القلوب والعقاب</label><br>
+  <label><input type="radio" name="q32" value="د"> د- ـ</label><br>
+  <button onclick="checkAnswer(32, 'ب')">تحقق</button>
+  <p id="correct32" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong32" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س33:</b> قال الله تعالى: (أحل لكم ليلة الصيام الرفث إلى نسائكم) الآية مثال على:</p>
+  <label><input type="radio" name="q33" value="أ"> أ- نسخ بدل أخف</label><br>
+  <label><input type="radio" name="q33" value="ب"> ب- نسخ بدل أثقل</label><br>
+  <label><input type="radio" name="q33" value="ج"> ج- نسخ لغير بدل</label><br>
+  <label><input type="radio" name="q33" value="د"> د- نسخ بدل مساوٍ</label><br>
+  <button onclick="checkAnswer(33, 'أ')">تحقق</button>
+  <p id="correct33" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong33" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س34:</b> قال تعالى: (والذين يتوفون منكم ويذرون أزواجاً يتربصن بأنفسهن أربعة أشهر وعشراً):</p>
+  <label><input type="radio" name="q34" value="أ"> أ- نسخ الحكم وبقاء التلاوة</label><br>
+  <label><input type="radio" name="q34" value="ب"> ب- نسخ التلاوة وبقاء الحكم</label><br>
+  <label><input type="radio" name="q34" value="ج"> ج- ـ</label><br>
+  <label><input type="radio" name="q34" value="د"> د- نسخ لغير بدل</label><br>
+  <button onclick="checkAnswer(34, 'ب')">تحقق</button>
+  <p id="correct34" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong34" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س35:</b> ولا تقل لهما أف: دلالة المنطوق هنا:</p>
+  <label><input type="radio" name="q35" value="أ"> أ- النفي</label><br>
+  <label><input type="radio" name="q35" value="ب"> ب- التشويق</label><br>
+  <label><input type="radio" name="q35" value="ج"> ج- التقرير</label><br>
+  <label><input type="radio" name="q35" value="د"> د- ـ</label><br>
+  <button onclick="checkAnswer(35, 'ج')">تحقق</button>
+  <p id="correct35" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong35" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س36:</b> من قصص الأنبياء في القرآن الكريم قصة:</p>
+  <label><input type="radio" name="q36" value="أ"> أ- عزيز</label><br>
+  <label><input type="radio" name="q36" value="ب"> ب- ذي القرنين</label><br>
+  <label><input type="radio" name="q36" value="ج"> ج- أهل الكهف</label><br>
+  <label><input type="radio" name="q36" value="د"> د- ذو النون</label><br>
+  <button onclick="checkAnswer(36, 'د')">تحقق</button>
+  <p id="correct36" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong36" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س37:</b> أي القصص الآتية يصح الاستدلال بها على أن الأنبياء لا يعلمون الغيب:</p>
+  <label><input type="radio" name="q37" value="أ"> أ- سليمان والنمل</label><br>
+  <label><input type="radio" name="q37" value="ب"> ب- سليمان والجن</label><br>
+  <label><input type="radio" name="q37" value="ج"> ج- إبراهيم وضيفه</label><br>
+  <label><input type="radio" name="q37" value="د"> د- جميع ما سبق</label><br>
+  <button onclick="checkAnswer(37, 'د')">تحقق</button>
+  <p id="correct37" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong37" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س38:</b> لما نزل قول الله: (الذين آمنوا ولم يلبسوا إيمانهم بظلم...) فسروه بال:</p>
+  <label><input type="radio" name="q38" value="أ"> أ- أكل حقوق الناس</label><br>
+  <label><input type="radio" name="q38" value="ب"> ب- الشرك</label><br>
+  <label><input type="radio" name="q38" value="ج"> ج- الربا</label><br>
+  <label><input type="radio" name="q38" value="د"> د- الزنا</label><br>
+  <button onclick="checkAnswer(38, 'ب')">تحقق</button>
+  <p id="correct38" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong38" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س39:</b> معنى قول الله: (والعاديات ضبحاً):</p>
+  <label><input type="radio" name="q39" value="أ"> أ- الرياح</label><br>
+  <label><input type="radio" name="q39" value="ب"> ب- البرق</label><br>
+  <label><input type="radio" name="q39" value="ج"> ج- الخيل</label><br>
+  <label><input type="radio" name="q39" value="د"> د- الملائكة</label><br>
+  <button onclick="checkAnswer(39, 'ج')">تحقق</button>
+  <p id="correct39" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong39" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س40:</b> مراحل خلق الجنين على الترتيب:</p>
+  <label><input type="radio" name="q40" value="أ"> أ- نطفة-علقة-مضغة</label><br>
+  <label><input type="radio" name="q40" value="ب"> ب- مضغة-علقة-نطفة</label><br>
+  <label><input type="radio" name="q40" value="ج"> ج- علقة-نطفة-مضغة</label><br>
+  <label><input type="radio" name="q40" value="د"> د- نطفة-مضغة-علقة</label><br>
+  <button onclick="checkAnswer(40, 'أ')">تحقق</button>
+  <p id="correct40" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong40" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+<div class="question">
+  <p><b>س41:</b> قال الله: (والسماء والطارق...) الاستفهام في الآية يفيد:</p>
+  <label><input type="radio" name="q41" value="أ"> أ- التبجير</label><br>
+  <label><input type="radio" name="q41" value="ب"> ب- التشويق</label><br>
+  <label><input type="radio" name="q41" value="ج"> ج- التقرير</label><br>
+  <label><input type="radio" name="q41" value="د"> د- النفي</label><br>
+  <button onclick="checkAnswer(41, 'ب')">تحقق</button>
+  <p id="correct41" class="result correct">✅ إجابة صحيحة</p>
+  <p id="wrong41" class="result wrong">❌ إجابة خاطئة</p>
+</div>
+
+</body></html>
